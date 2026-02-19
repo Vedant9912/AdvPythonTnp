@@ -1,0 +1,491 @@
+# Name-Vedant Wagadre
+
+
+# question1
+ #1. Reverse an Array
+# arr1=[1,2,5,7,8]
+# left=0
+# right=len(arr)-1
+# while left<right:
+#     arr[left],arr[right]=arr[right],arr[left]
+#     left+=1
+#     right-=1
+# print(arr)
+
+# arr=[1,2,5,7,8,2]
+# left=0
+# n=len(arr)-1
+# for i in range(len(arr)//2):
+#     arr[i],arr[n-i]=arr[n-i],arr[i]
+# print(arr)
+
+
+
+# question2
+# # 2. Find the Maximum & Minimum Element
+# arr2=[6,6,3,4,3,1]
+# mx=arr2[0]
+# mn=arr2[0]
+# for i in range(1,len(arr2)):
+#     if mx<arr2[i]:
+#         mx=arr2[i]
+#     if mn>arr2[i]:
+#         mn=arr2[i]
+# print(mx,mn)
+
+
+# 3. Find the Sum of Elements
+# arr=[1,2,5,7,4]
+# sum=0
+# for i in arr:
+#     sum+=i
+# print(sum)
+
+# 4. Find the Second Largest Element
+# arr = [1, 2, 5, 7, 4]
+# arr.sort()
+# i = len(arr) - 1
+# while i > 0:
+#     if arr[i] != arr[i-1]:
+#         second_max = arr[i-1]
+#         break
+#     i -= 1
+# print(second_max)
+
+
+# arr = [1, 2, 5, 7, 4]
+# largest=-1
+# slargest=-1
+# for i in arr:
+#     if i>largest:
+#         slargest=largest
+#         largest=i
+        
+#     elif largest>i>slargest:
+#         slargest=i
+# print(slargest)
+
+
+# 5. Count Frequency of Elements
+# arr=[1,2,5,6,6,3,7,5,5,5]
+# dictr={}
+# for i in range(len(arr)):
+#     if arr[i] in dictr:
+#         dictr[arr[i]]+=1
+#     else:
+#         dictr[arr[i]]=1
+# print(dictr)
+
+
+# 6. Check if Array is Sorted
+# arr=[1,3,4,5,7,9]
+# for i in range(len(arr)):
+#     if arr[i+1]>arr[i]:
+#         pass
+#     else:
+#         print("unsorted")
+#         break
+
+
+# 7. Rotate Array by k Positions: Rotate the array to the right by k positions.
+# arr = [1, 3, 5, 6, 7, 9]
+# n = len(arr)
+# k = 1
+# k = k % n
+# arr[:] = arr[n-k:] + arr[:n-k]
+# print(arr)
+
+
+
+
+# 8. Find Pair with Given Sum: Find a pair of elements that adds up to a target sum.
+# arr=[1,4,6,3,7,8,4,7,3]
+# target=4
+# for i in range(len(arr)):
+#     for j in range(i+1,len(arr)):
+#         if target==arr[i]+arr[j]:
+#             print(i,j)
+
+
+
+# 9. Remove Duplicates from Array: Remove duplicates from the array while maintaining order.
+# arr=[1,4,6,3,7,8,4,7,3]
+# seen=set()
+# res=[]
+# for i in arr:
+#     if i in res:
+#         pass
+#     else:
+#         seen.add(i)
+#         res.append(i)
+# print(res)
+
+
+# 10. Merge Two Sorted Arrays
+
+
+# num1 = [1,4,6]
+# num2 = [2,6,8]
+
+# i = 0
+# j = 0
+
+# while i < len(num1) and j < len(num2):
+#     if num1[i] > num2[j]:
+#         num1.insert(i, num2[j])
+#         j += 1
+#         i += 1
+#     else:
+#         i += 1
+# while j < len(num2):
+#     num1.append(num2[j])
+#     j += 1
+
+# print(num1)
+
+
+
+
+#11. Remove Element
+#11 question
+# arr=[3,2,2,3]
+# element=3
+# while element in arr:
+#     arr.remove(element)
+# print(arr)
+
+
+
+ #12. Missing Number (sum formula)
+
+# arr=[1,2,4,5]
+# n=5
+# print(n*(n+1)/2-sum(arr))
+
+
+# 13. Find Duplicates in an Array
+
+# arr = [1,2,3,2,4,1]
+# seen = set()
+# dup = []
+# for x in arr:
+#     if x in seen:
+#         dup.append(x)
+#     seen.add(x)
+# print(dup)
+
+
+
+
+# 14. Find Intersection of Two Arrays: Find the common elements between two arrays.
+
+
+# a = [1,2,3,4]
+# b = [3,4,5,6]
+# print(list(set(a) & set(b)))
+
+# 15. Find Union of Two Arrays
+
+# arr1=[1,2,3,4,5]
+# arr2=[2,4,6,8,9]
+# s=set()
+# for i in arr1:
+#     s.add(i)
+# for i in arr2:
+#     s.add(i)
+# print(s)
+
+#16  Check if Arrays Equal
+# arr1 = [1,2,3,4]
+# arr2 = [1,2,3,4]
+
+# if sorted(arr1) == sorted(arr2):
+#     print("Same")
+# else:
+#     print("Not Same")
+
+
+
+#17. Leader Elements
+# arr = [16,17,4,3,5,2]
+# max_element=arr[-1]
+# result=[max_element]
+# for i in range (len(arr)-2,-1,-1):
+#     if arr[i]>max_element:
+#         max_element=arr[i]
+#         result.append(max_element)
+
+# print(result)
+
+
+# 18. Move Zeroes to End: Move all zeroes in an array to the end while maintaining the order of non-zero elements.
+
+
+# arr = [0,1,0,3,12]
+
+# pos = 0
+# for i in range(len(arr)):
+#     if arr[i] != 0:
+#         arr[pos], arr[i] = arr[i], arr[pos]
+#         pos += 1
+
+# print(arr)
+
+# 19. Find Subarray with Given Sum.
+
+
+# arr = [1,2,3,7,5]
+# target = 12
+# left = 0
+# curr = 0
+# for right in range(len(arr)):
+#     curr += arr[right]
+#     while curr > target:
+#         curr -= arr[left]
+#         left += 1
+#     if curr == target:
+#         print(arr[left:right+1])
+#         break
+
+# # 20. Rotate Array to the Left by k Positions
+
+
+# arr = [1,2,3,4,5]
+# k = 2
+
+# k = k % len(arr)
+# arr = arr[k:] + arr[:k]
+
+# print(arr)
+
+# 21. Find the Kth Smallest Element
+
+# def kth_smallest(arr, k):
+#     arr.sort()          
+#     return arr[k-1]     
+# arr=[1,5,8,98,4]
+# k=3
+# print(kth_smallest(arr,k))
+
+
+# 22. All Subarrays
+
+
+# arr=[1,2,3]
+# for i in range(len(arr)):
+#     result=[]
+#     for j in range (i,len(arr)):
+#         result.append(arr[j])
+#         print(result)
+
+
+
+# 23. Maximum Sum Subarray (Kadane's Algorithm)
+
+# arr = [-2,1,-3,4,-1,2,1,-5,4]
+
+# max_sum = curr = arr[0]
+
+# for x in arr[1:]:
+#     curr = max(x, curr + x)
+#     max_sum = max(max_sum, curr)
+
+# print(max_sum)
+
+
+
+
+# 24. Rearrange Array Alternately: Rearrange an array such that elements alternate between the largest and smallest.
+
+# arr = [1,2,3,4,5,6]
+
+# arr.sort()
+# i = 0
+# j = len(arr)-1
+# res = []
+
+# while i <= j:
+#     if i != j:
+#         res.append(arr[j])
+#         res.append(arr[i])
+#     else:
+#         res.append(arr[i])
+#     i += 1
+#     j -= 1
+
+# print(res)
+
+# 25. Find Majority Element: Find the element that appears more than n/2 times.
+
+
+# arr = [2,2,1,1,1,2,2]
+# n=len(arr)
+# dictionary=dict()
+# for i in range(len(arr)):
+#     if arr[i] in dictionary:
+#         dictionary[arr[i]]+=1
+#     else:
+#         dictionary[arr[i]]=1
+
+# for key in dictionary:
+#     if dictionary[key]>n//2:
+#         print(key)
+
+
+
+# 26. Find Peak Element: A peak element is greater than its neighbors. Find one such element.
+# arr = [1,2,3,1,0,-1,-2,-3,-4,-5,-6]
+# n=len(arr)
+# mid=n//2
+# while True:
+#     if arr[mid]<arr[mid+1]:
+#         mid+=1
+#     elif arr[mid]<arr[mid-1]:
+#         mid-=1
+#     else:
+#         print(mid)
+#         break
+
+
+# 27. Find the First Missing Positive: Find the smallest positive integer missing in the array.
+
+
+# arr = [3,4,-1,1]
+
+# s = set(arr)
+# i = 1
+
+# while True:
+#     if i not in s:
+#         print(i)
+#         break
+#     i += 1
+
+
+
+
+
+# 28. Sort an Array of 0s, 1s, and 2s: Sort an array consisting of only 0s, 1s, and 2s.
+# arr = [0,1,2,0,1,2,1,0]
+
+# low = mid = 0
+# high = len(arr)-1
+
+# while mid <= high:
+#     if arr[mid] == 0:
+#         arr[low], arr[mid] = arr[mid], arr[low]
+#         low += 1
+#         mid += 1
+#     elif arr[mid] == 1:
+#         mid += 1
+#     else:
+#         arr[mid], arr[high] = arr[high], arr[mid]
+#         high -= 1
+
+# print(arr)
+
+
+
+# 29. Find the Longest Consecutive Sequence: Find the length of the longest consecutive sequence of integers.
+
+
+# arr = [100,4,200,1,3,2]
+
+# s = set(arr)
+# longest = 0
+
+# for num in s:
+#     if num-1 not in s:
+#         curr = num
+#         streak = 1
+#         while curr+1 in s:
+#             curr += 1
+#             streak += 1
+#         longest = max(longest, streak)
+
+# print(longest)
+
+# 30. Product of Array Except Self
+
+# arr = [1,2,3,4]
+# new=[]
+# for i in range(len(arr)):
+#     product=1
+#     for j in range(len(arr)):
+#         if i==j:
+#             pass
+#         else:
+#             product*=arr[j]
+#     new.append(product)
+# print(new)
+
+
+# 31. Find Equilibrium Index: Find an index such that sum of elements on left = sum on right.
+
+# arr = [-7,1,5,2,-4,3,0]
+# total = sum(arr)
+# left = 0
+# for i in range(len(arr)):
+#     total -= arr[i]
+#     if left == total:
+#         print(i)
+#         break
+#     left += arr[i]
+
+#Q
+# 32. Find Maximum Product Pair: Find two elements whose product is maximum.
+
+# arr = [-10,-3,5,6,-2]
+# arr.sort()
+# print(max(arr[0]*arr[1], arr[-1]*arr[-2]))
+
+
+
+
+#Question
+# 33. Find Maximum Difference 
+# arr = [2,3,10,6,4,8,1]
+# min_val = arr[0]
+# max_diff = float('-inf')
+# for i in range(1,len(arr)):
+#     max_diff = max(max_diff, arr[i] - min_val)
+#     min_val = min(min_val, arr[i])
+
+# print(max_diff)
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+        
